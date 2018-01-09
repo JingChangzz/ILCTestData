@@ -28,7 +28,7 @@ dependencies {
 }
 
 task makeJar(type: Copy) {
-    delete 'build/libs/devicejar.jar'
+    delete 'build/lidevicejar.jar'
     from('build/intermediates/bundles/release/')
     into('build/libs/')
     include('classes.jar')

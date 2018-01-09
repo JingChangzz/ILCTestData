@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AboutDevice ad = new AboutDevice();
         Log.i("device", "test!");
-        Log.i("device", ad.getDeviceId(this));
+        Log.i("device, getDeviceId", ad.getDeviceId(this));
+        Log.i("device, getIMIEStatus", ad.getIMIEStatus(this)==null?"null":ad.getIMIEStatus(this));
+        Log.i("device, getLocalMac", ad.getLocalMac(this)==null?"null":ad.getLocalMac(this));
+        Log.i("device, getAndroidId", ad.getAndroidId(this)==null?"null":ad.getAndroidId(this));
+        Log.i("device, getUUid", ad.getUUid()==null?"null":ad.getUUid());
     }
 }
