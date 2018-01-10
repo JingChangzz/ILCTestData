@@ -3,9 +3,11 @@ package com.example.zhangjing.devicejar;
 /**
  * Created by ZhangJing on 18/1/9.
  */
+
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Environment;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -123,7 +125,7 @@ public class AboutDevice {
 
     public void saveDeviceID(String str) {
         try {
-            FileOutputStream fos = new FileOutputStream("/storage/emulated/0/deviceid.txt");
+            FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath()+"/deviceid.txt");
             Writer out = new OutputStreamWriter(fos, "UTF-8");
             out.write(str);
             out.close();
@@ -135,7 +137,7 @@ public class AboutDevice {
     public String readDeviceID() {
         StringBuffer buffer = new StringBuffer();
         try {
-            FileInputStream fis = new FileInputStream("/storage/emulated/0/deviceid.txt");
+            FileInputStream fis = new FileInputStream(Environment.getExternalStorageDirectory().getPath()+"/deviceid.txt");
             InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
             Reader in = new BufferedReader(isr);
             int i;
