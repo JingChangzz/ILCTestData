@@ -1,0 +1,6 @@
+接收方库
+
+与devicejar是一对
+devicejar    recdevicejar
+写文件          读文件
+发广播          接收广播
