@@ -1,1 +1,1 @@
-include ':devicetest', ':devicejar'
+include ':devicetest', ':devicejar', ':recdevicejar', ':recdevicetest'

@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ILCTestData.iml" filepath="$PROJECT_DIR$/ILCTestData.iml" />
       <module fileurl="file://$PROJECT_DIR$/devicejar/devicejar.iml" filepath="$PROJECT_DIR$/devicejar/devicejar.iml" />
       <module fileurl="file://$PROJECT_DIR$/devicetest/devicetest.iml" filepath="$PROJECT_DIR$/devicetest/devicetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recdevicejar/recdevicejar.iml" filepath="$PROJECT_DIR$/recdevicejar/recdevicejar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recdevicetest/recdevicetest.iml" filepath="$PROJECT_DIR$/recdevicetest/recdevicetest.iml" />
     </modules>
   </component>
 </project>
