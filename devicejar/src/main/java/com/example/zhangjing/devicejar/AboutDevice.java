@@ -125,6 +125,7 @@ public class AboutDevice {
 
     public void saveDeviceID(String str) {
         try {
+
             FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath()+"/deviceid.txt");
             Writer out = new OutputStreamWriter(fos, "UTF-8");
             out.write(str);
