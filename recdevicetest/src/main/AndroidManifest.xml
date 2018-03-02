@@ -12,28 +12,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="zhangjing" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
-    <receiver android:name="com.zhangjing.recdevicejar.DeviceJarReceiver"
-        android:exported="true"
-        android:process=":remote"
-        >
-        <intent-filter>
-            <action android:name="com.example.static_bc" >
-            </action>
-        </intent-filter>
-    </receiver>
-    <receiver android:name="com.example.zhangjing.recdevicetest.Receiver"
-        android:exported="true"
-        android:process=":remote"
-        >
-        <intent-filter>
-            <action android:name="com.example.static_bc" >
-            </action>
-        </intent-filter>
-    </receiver>
 
 </manifest>

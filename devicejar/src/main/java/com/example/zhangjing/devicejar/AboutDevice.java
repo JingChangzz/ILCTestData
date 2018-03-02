@@ -25,7 +25,7 @@ import java.util.UUID;
 /**
  * Created by ZhangJing on 18/1/8.
  */
-public class AboutDevice {
+public class AboutDevice{
 
     public String getDeviceId(Context context) {
         String deviceId = "";

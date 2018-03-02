@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MessagerClient</string>
+    <string name="menu_settings">Settings</string>
+    <string name="aidl_btn_text">AIDL</string>
+</resources>

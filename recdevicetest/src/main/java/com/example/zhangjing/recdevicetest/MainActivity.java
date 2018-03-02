@@ -1,11 +1,12 @@
 package com.example.zhangjing.recdevicetest;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.zhangjing.recdevicejar.readFile;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
         new readFile(this).readDeviceID();
 //        IntentFilter intentFilter = new IntentFilter("com.example.static_bc");
 //        registerReceiver(new Receiver(), intentFilter);
+        Log.i("Xposedtesttesttest", getIntent().toUri(0));
+        
     }
 }

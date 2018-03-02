@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/devicejar" />
             <option value="$PROJECT_DIR$/devicetest" />
+            <option value="$PROJECT_DIR$/messagerclient" />
+            <option value="$PROJECT_DIR$/messagerserver" />
             <option value="$PROJECT_DIR$/recdevicejar" />
             <option value="$PROJECT_DIR$/recdevicetest" />
           </set>
