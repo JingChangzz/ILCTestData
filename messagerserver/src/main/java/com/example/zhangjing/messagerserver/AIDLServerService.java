@@ -5,12 +5,14 @@ package com.example.zhangjing.messagerserver;
  */
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 
 /***
@@ -40,8 +42,8 @@ public class AIDLServerService extends Service {
                     {
                         //模拟耗时
                         Thread.sleep(2000);
-                        msgToClient.arg2 = msgfromClient.arg1 + msgfromClient.arg2;
-                        Log.e("Messager-Server", "返回" + msgfromClient.arg1 + "+" + msgfromClient.arg2 + "计算结果");
+                        msgToClient.obj= getIMIEStatus(getApplication().getBaseContext());
+                        Log.e("Messager-Server", "返回");
                         msgfromClient.replyTo.send(msgToClient);
                     } catch (InterruptedException e)
                     {
@@ -61,5 +63,19 @@ public class AIDLServerService extends Service {
     public IBinder onBind(Intent intent)
     {
         return mMessenger.getBinder();
+    }
+
+    // IMEI码
+    public String getIMIEStatus(Context context) {
+        String deviceId = null;
+        try {
+            TelephonyManager tm = (TelephonyManager) context
+                    .getSystemService(Context.TELEPHONY_SERVICE);
+            deviceId = tm.getDeviceId();
+            Log.i("device", "getFromLocalMac,IMIE");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return deviceId;
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.zhangjing.devicejar.AboutDevice;
+import com.example.zhangjing.devicejar.test;
 
 public class MainActivity extends Activity {
 
@@ -20,7 +21,7 @@ public class MainActivity extends Activity {
         Log.i("device, getLocalMac", ad.getLocalMac(this) == null ? "null" : ad.getLocalMac(this));
         Log.i("device, getAndroidId", ad.getAndroidId(this) == null ? "null" : ad.getAndroidId(this));
         Log.i("device, getUUid", ad.getUUid() == null ? "null" : ad.getUUid());
-        //new test(this).main(null);
+        new test(this).main(null);
 
     }
 

@@ -13,6 +13,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +45,7 @@ public class MainActivity extends Activity {
             {
                 case MSG_SUM:
                     TextView tv = (TextView) mLyContainer.findViewById(msgFromServer.arg1);
-                    tv.setText(tv.getText() + "=>" + msgFromServer.arg2);
+                    tv.setText(tv.getText() + "=>" + msgFromServer.obj);
                     break;
             }
             super.handleMessage(msgFromServer);
@@ -161,6 +162,20 @@ public class MainActivity extends Activity {
         explicitIntent.setComponent(component);
 
         return explicitIntent;
+    }
+
+    // IMEI码
+    public String getIMIEStatus(Context context) {
+        String deviceId = null;
+        try {
+            TelephonyManager tm = (TelephonyManager) context
+                    .getSystemService(Context.TELEPHONY_SERVICE);
+            deviceId = tm.getDeviceId();
+            Log.i("device", "getFromLocalMac,IMIE");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return deviceId;
     }
 
 }

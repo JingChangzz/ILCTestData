@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ILCTestData.iml" filepath="$PROJECT_DIR$/ILCTestData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidlclient/aidlclient.iml" filepath="$PROJECT_DIR$/aidlclient/aidlclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidlserver/aidlserver.iml" filepath="$PROJECT_DIR$/aidlserver/aidlserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/devicejar/devicejar.iml" filepath="$PROJECT_DIR$/devicejar/devicejar.iml" />
       <module fileurl="file://$PROJECT_DIR$/devicetest/devicetest.iml" filepath="$PROJECT_DIR$/devicetest/devicetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/messagerclient/messagerclient.iml" filepath="$PROJECT_DIR$/messagerclient/messagerclient.iml" />
